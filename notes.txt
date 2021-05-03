@@ -1,0 +1,40 @@
+docker stuff
+------------
+docker ps -> list running containers
+docker images -> list current images
+docker image prune -> remove dangling images
+
+docker build -t <tag you want for the image> .
+docker run <--publish ext_port:container_port> <--name 'container-name'> <name of image to run>
+docker kill <container-id>
+
+docker-compose build
+docker-compose up -d
+docker-compose logs -f
+
+https://stackoverflow.com/questions/29480099/whats-the-difference-between-docker-compose-vs-dockerfile
+docker-compose if running multiple containers that are dependent on each other, i.e. a web app with a db (2 containers).
+
+https://stackoverflow.com/questions/24319662/from-inside-of-a-docker-container-how-do-i-connect-to-the-localhost-of-the-mach
+
+k8s stuff
+---------
+https://stackoverflow.com/questions/58798201/how-to-make-multiple-pods-communicate-with-each-other-on-kubernetes
+
+
+python/flask stuff
+------------
+https://stackoverflow.com/questions/38601440/what-is-the-point-of-uwsgi
+https://serverfault.com/questions/331256/why-do-i-need-nginx-and-something-like-gunicorn
+https://stackoverflow.com/questions/41940663/why-cant-i-change-the-host-and-port-that-my-flask-app-runs-on/41940807 -> note the usage of the flask command (compared to calling 'python <script name> run -h 0.0.0.0' in the testdriven.io tutorial docker-compose file)
+https://stackoverflow.com/questions/27539309/how-do-i-create-a-link-to-another-html-page
+
+
+golang stuff
+------------
+go run <filename>
+
+https://golang.org/pkg/net/http/#HandleFunc
+https://blog.golang.org/docker
+https://firehydrant.io/blog/develop-a-go-app-with-docker-compose/
+https://codefresh.io/docs/docs/learn-by-example/golang/golang-hello-world/

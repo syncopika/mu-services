@@ -1,0 +1,12 @@
+microservices project idea
+
+flask+gunicorn for client frontend? and another one with node/express?
+
+https://www.google.com/search?q=docker+container+communication+api&rlz=1C1CHBF_enUS836US836&ei=pxqKYPjAFKSj5NoP-MWHqAw&oq=docker+container+communication+api&gs_lcp=Cgdnd3Mtd2l6EAMyBggAEBYQHjIGCAAQFhAeOgcIABBHELADOgcIABCwAxBDOgIIAFDfCljiDmCjEGgBcAJ4AIAB_AGIAf8DkgEFMS4xLjGYAQCgAQGqAQdnd3Mtd2l6yAEJwAEB&sclient=gws-wiz&ved=0ahUKEwi4sM_ptKLwAhWkEVkFHfjiAcUQ4dUDCA4&uact=5
+https://stackoverflow.com/questions/61548692/communication-between-2-apis-that-are-inside-two-different-containers
+https://www.docker.com/blog/how-to-use-the-official-nginx-docker-image/
+https://testdriven.io/blog/dockerizing-flask-with-postgres-gunicorn-and-nginx/
+https://pythonspeed.com/articles/official-python-docker-image/
+https://docs.docker.com/config/containers/container-networking/
+https://www.reddit.com/r/docker/comments/9np9j6/one_single_dockercomposeyml_vs_one_for_each/
+https://kubernetes.io/docs/concepts/services-networking/connect-applications-service/

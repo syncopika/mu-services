@@ -1,0 +1,44 @@
+<!doctype html>
+
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<title> something </title>
+</head>
+	
+<body>
+	<h3> hello there </h3>
+	<p>what are we looking at?</p>
+	
+	<br />
+	
+	<p>places to visit</p>
+	<ul>
+		<li><a href="{{ url_for('go_somewhere') }}">somewhere</a></li>
+	</ul>
+	
+	<br />
+	
+	<div>
+		<p> what time is it? <span><button id='getTime' onclick='getTime()'> get time </button></span></p>
+		<p> the time: <span id='time'></span></p>
+	</div>
+</body>
+
+
+<script>
+	function getTime(){
+		// call the server's get_time route to fetch the time
+		// note currently we're assuming the timekeeper service
+		fetch('/getTime')
+		.then(res => {
+			return res.json();
+		})
+		.then(data => {
+			document.getElementById('time').textContent = data.time;
+		});
+	}
+</script>
+	
+</html>
