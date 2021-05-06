@@ -12,3 +12,4 @@ https://www.reddit.com/r/docker/comments/9np9j6/one_single_dockercomposeyml_vs_o
 https://kubernetes.io/docs/concepts/services-networking/connect-applications-service/
 https://stackoverflow.com/questions/43217006/how-to-configure-a-kubernetes-multi-pod-deployment
 https://stackoverflow.com/questions/611906/http-post-with-url-query-parameters-good-idea-or-not
+https://docs.docker.com/get-started/kube-deploy/

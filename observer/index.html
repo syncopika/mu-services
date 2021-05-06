@@ -5,20 +5,72 @@
 <head>
 	<title> observer </title>
 	<meta charset='utf-8'>
+	<style>
+		body {
+			font-family: sans-serif;
+		}
+	</style>
 </head>
 
 <body>
 	<h2> welcome! </h2>
 	<h3> current services running: </h3>
+	<br />
 	<div id='currServices'>
 	</div>
 </body>
 
 
 <script>
+	function createNewService(serviceName, serviceStatus, timestamp){
+		const div = document.createElement('div');
+		div.id = serviceName + "-div";
+		
+		const name = document.createElement('h3');
+		name.textContent = serviceName;
+		name.id = serviceName
+		div.appendChild(name);
+		
+		const status = document.createElement('p');
+		status.textContent = "status: " + serviceStatus;
+		status.id = serviceName + "-status";
+		div.appendChild(status);
+		
+		const time = document.createElement('p');
+		time.textContent = "last seen: " + timestamp;
+		time.id = serviceName + "-timestamp";
+		div.appendChild(time);
+		
+		div.appendChild(document.createElement('br'));
+		return div;
+	}
+
 	// poll the server at a regular interval to get updates orphans
 	// turn this into an ejs template and have the server re-render with
 	// current data at regular intervals?
+	setInterval(() => {
+		fetch('/getCurrServices').then(res => res.json()).then(data => {
+			//console.log("got curr services");
+			const currServices = Object.keys(data.services);
+			const serviceContainer = document.getElementById('currServices');
+			
+			currServices.forEach((serviceName) => {
+				const status = data.services[serviceName]['status'];
+				const timestamp = data.services[serviceName]['timestamp'];
+				const serviceHtml = document.getElementById(serviceName+"-div");
+				if(serviceHtml){
+					// update text
+					document.getElementById(serviceName+"-status").textContent = "status: " + status;
+					document.getElementById(serviceName+"-timestamp").textContent = "last seen: " + timestamp;
+				}else{
+					// create new service html element
+					const newService = createNewService(serviceName, status, timestamp);
+					serviceContainer.appendChild(newService);
+				}
+			});
+			
+		});
+	}, 5000); // every 5 sec.
 </script>
 
 </html>

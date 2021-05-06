@@ -5,7 +5,7 @@ docker images -> list current images
 docker image prune -> remove dangling images
 
 docker build -t <tag you want for the image> .
-docker run <--publish ext_port:container_port> <--name 'container-name'> <name of image to run>
+docker run <-d (detached)> <--publish ext_port:container_port> <--name 'container-name'> <name of image to run>
 docker kill <container-id>
 
 docker-compose build
@@ -38,3 +38,6 @@ https://golang.org/pkg/net/http/#HandleFunc
 https://blog.golang.org/docker
 https://firehydrant.io/blog/develop-a-go-app-with-docker-compose/
 https://codefresh.io/docs/docs/learn-by-example/golang/golang-hello-world/
+https://gobyexample.com/tickers -> neat. seems useful for sending a heartbeat
+https://stackoverflow.com/questions/24455147/how-do-i-send-a-json-string-in-a-post-request-in-go
+https://stackoverflow.com/questions/15672556/handling-json-post-request-in-go -> see comment on struct fields needing to be capitalized for visibility. argghhh!
