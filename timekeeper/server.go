@@ -36,7 +36,7 @@ func createHeartbeatMsg(service string) []byte {
 func main() {
 
 	// emit heartbeat every 10 sec
-	observerEndpoint := "http://localhost:3000/serviceUpdate"
+	observerEndpoint := "http://host.docker.internal:3000/serviceUpdate"
 	ticker := time.NewTicker(10000 * time.Millisecond)
 	done := make(chan bool)
 	
@@ -49,9 +49,13 @@ func main() {
 				// send heartbeat
 				newHeartbeat := createHeartbeatMsg("timekeeper")
 				
-				resp, _ := http.Post(observerEndpoint, "application/json", bytes.NewBuffer(newHeartbeat))
+				resp, err := http.Post(observerEndpoint, "application/json", bytes.NewBuffer(newHeartbeat))
 				
-				defer resp.Body.Close()
+				if err != nil {
+					fmt.Println(err)
+				} else {
+					defer resp.Body.Close()
+				}	
 			}
 		}
 	}()

@@ -13,7 +13,7 @@
 </head>
 
 <body>
-	<h2> welcome! </h2>
+	<h2> welcome to the observatory! </h2>
 	<h3> current services running: </h3>
 	<br />
 	<div id='currServices'>
@@ -26,14 +26,21 @@
 		const div = document.createElement('div');
 		div.id = serviceName + "-div";
 		
-		const name = document.createElement('h3');
+		const name = document.createElement('h2');
 		name.textContent = serviceName;
 		name.id = serviceName
+		name.style.fontFamily = "trebuchet";
 		div.appendChild(name);
 		
 		const status = document.createElement('p');
 		status.textContent = "status: " + serviceStatus;
 		status.id = serviceName + "-status";
+		status.style.width = "5%";
+
+		if(serviceStatus === "good"){
+			status.style.backgroundColor = "#00ff00";
+		}
+					
 		div.appendChild(status);
 		
 		const time = document.createElement('p');
@@ -41,7 +48,7 @@
 		time.id = serviceName + "-timestamp";
 		div.appendChild(time);
 		
-		div.appendChild(document.createElement('br'));
+		div.appendChild(document.createElement('hr'));
 		return div;
 	}
 
@@ -60,8 +67,15 @@
 				const serviceHtml = document.getElementById(serviceName+"-div");
 				if(serviceHtml){
 					// update text
-					document.getElementById(serviceName+"-status").textContent = "status: " + status;
-					document.getElementById(serviceName+"-timestamp").textContent = "last seen: " + timestamp;
+					const statusHtml = document.getElementById(serviceName+"-status");
+					statusHtml.style.width = "5%";
+					statusHtml.textContent = "status: " + status;
+					if(status === "good"){
+						statusHtml.style.backgroundColor = "#00ff00";
+					}
+					
+					const timestampHtml = document.getElementById(serviceName+"-timestamp");
+					timestampHtml.textContent = "last seen: " + timestamp;
 				}else{
 					// create new service html element
 					const newService = createNewService(serviceName, status, timestamp);

@@ -41,3 +41,4 @@ https://codefresh.io/docs/docs/learn-by-example/golang/golang-hello-world/
 https://gobyexample.com/tickers -> neat. seems useful for sending a heartbeat
 https://stackoverflow.com/questions/24455147/how-do-i-send-a-json-string-in-a-post-request-in-go
 https://stackoverflow.com/questions/15672556/handling-json-post-request-in-go -> see comment on struct fields needing to be capitalized for visibility. argghhh!
+

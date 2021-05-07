@@ -2,6 +2,13 @@ microservices project idea
 
 flask+gunicorn for client frontend? and another one with node/express?
 
+
+    client-frontend thing <---------> timekeeper ---------> observer
+               |                                              ^
+               |                                              |
+               -----------------------------------------------
+
+
 https://www.google.com/search?q=docker+container+communication+api&rlz=1C1CHBF_enUS836US836&ei=pxqKYPjAFKSj5NoP-MWHqAw&oq=docker+container+communication+api&gs_lcp=Cgdnd3Mtd2l6EAMyBggAEBYQHjIGCAAQFhAeOgcIABBHELADOgcIABCwAxBDOgIIAFDfCljiDmCjEGgBcAJ4AIAB_AGIAf8DkgEFMS4xLjGYAQCgAQGqAQdnd3Mtd2l6yAEJwAEB&sclient=gws-wiz&ved=0ahUKEwi4sM_ptKLwAhWkEVkFHfjiAcUQ4dUDCA4&uact=5
 https://stackoverflow.com/questions/61548692/communication-between-2-apis-that-are-inside-two-different-containers
 https://www.docker.com/blog/how-to-use-the-official-nginx-docker-image/
@@ -13,3 +20,14 @@ https://kubernetes.io/docs/concepts/services-networking/connect-applications-ser
 https://stackoverflow.com/questions/43217006/how-to-configure-a-kubernetes-multi-pod-deployment
 https://stackoverflow.com/questions/611906/http-post-with-url-query-parameters-good-idea-or-not
 https://docs.docker.com/get-started/kube-deploy/
+https://kubernetes.io/docs/concepts/cluster-administration/networking/
+
+
+========= TODO:
+- get a cron job to post to the observer service in app.py for the client frontend-serving server. see if that works just between containers.
+- set up kubernetes? 1 pod for each service (so 1 container per pod as of now). how do we get the pods to talk to each other? and open up pods to the host?
+
+
+
+========= set up
+get docker, python3, golang, nodejs
