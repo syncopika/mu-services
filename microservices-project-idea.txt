@@ -21,13 +21,12 @@ https://stackoverflow.com/questions/43217006/how-to-configure-a-kubernetes-multi
 https://stackoverflow.com/questions/611906/http-post-with-url-query-parameters-good-idea-or-not
 https://docs.docker.com/get-started/kube-deploy/
 https://kubernetes.io/docs/concepts/cluster-administration/networking/
-
+https://matthewpalmer.net/kubernetes-app-developer/articles/kubernetes-deployment-tutorial-example-yaml.html
 
 ========= TODO:
 - get a cron job to post to the observer service in app.py for the client frontend-serving server. see if that works just between containers.
 - set up kubernetes? 1 pod for each service (so 1 container per pod as of now). how do we get the pods to talk to each other? and open up pods to the host?
 
 
-
 ========= set up
-get docker, python3, golang, nodejs
+get docker, python3, golang, nodejs, kubectl, minikube

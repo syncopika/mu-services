@@ -1,0 +1,29 @@
+# for setting up a k8s deployment
+# reminder: don't use tabs for yaml!
+
+# client-frontend
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: client-frontend
+spec:
+  containers:
+    - name: client-frontend
+      image: client-frontend_web # this is what I named my image via docker build
+      ports:
+        - containerPort: 5000
+
+# observer
+#---
+#apiVersion: v1
+#kind: Pod
+#metadata:
+#  name: observer
+
+# timekeeper
+#---
+#apiVersion: v1
+#kind: Pod
+#metadata:
+#  name: timekeeper

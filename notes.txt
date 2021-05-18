@@ -20,6 +20,14 @@ https://stackoverflow.com/questions/24319662/from-inside-of-a-docker-container-h
 k8s stuff
 ---------
 https://stackoverflow.com/questions/58798201/how-to-make-multiple-pods-communicate-with-each-other-on-kubernetes
+https://stackoverflow.com/questions/50490808/unable-to-connect-to-the-server-dial-tcp-18080-connectex-no-connection-c
+https://www.mirantis.com/blog/introduction-to-yaml-creating-a-kubernetes-deployment/
+
+when setting up pods, you need to start up a cluster first (can use minikube)
+minikube start
+
+then if you have a yaml for pod setup,
+kubectl create -f <yaml file>
 
 
 python/flask stuff
