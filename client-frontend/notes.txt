@@ -1,0 +1,2 @@
+since there's a docker-compose.yml file here, you have to start up the container with `docker-compose up`.
+for use with k8s, use kompose to convert the docker-compose.yml to a k8s deployment yaml.

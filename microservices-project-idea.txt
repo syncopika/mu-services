@@ -22,6 +22,7 @@ https://stackoverflow.com/questions/611906/http-post-with-url-query-parameters-g
 https://docs.docker.com/get-started/kube-deploy/
 https://kubernetes.io/docs/concepts/cluster-administration/networking/
 https://matthewpalmer.net/kubernetes-app-developer/articles/kubernetes-deployment-tutorial-example-yaml.html
+https://kubernetes.io/docs/tasks/configure-pod-container/translate-compose-kubernetes/
 
 ========= TODO:
 - get a cron job to post to the observer service in app.py for the client frontend-serving server. see if that works just between containers.

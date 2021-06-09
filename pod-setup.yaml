@@ -2,6 +2,7 @@
 # reminder: don't use tabs for yaml!
 
 # client-frontend
+# client-frontend_web is what I named my image via docker build
 ---
 apiVersion: v1
 kind: Pod
@@ -10,7 +11,7 @@ metadata:
 spec:
   containers:
     - name: client-frontend
-      image: client-frontend_web # this is what I named my image via docker build
+      image: client-frontend_web
       ports:
         - containerPort: 5000
 
