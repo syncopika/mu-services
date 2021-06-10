@@ -41,7 +41,7 @@ spec:
               key: FLASK_ENV
               name: env-dev
         image: web
-        imagePullPolicy: ""
+        imagePullPolicy: Never
         name: web
         ports:
         - containerPort: 5000

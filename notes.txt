@@ -22,12 +22,27 @@ k8s stuff
 https://stackoverflow.com/questions/58798201/how-to-make-multiple-pods-communicate-with-each-other-on-kubernetes
 https://stackoverflow.com/questions/50490808/unable-to-connect-to-the-server-dial-tcp-18080-connectex-no-connection-c
 https://www.mirantis.com/blog/introduction-to-yaml-creating-a-kubernetes-deployment/
+https://stackoverflow.com/questions/36874880/kubernetes-cannot-pull-local-image
+https://stackoverflow.com/questions/47369351/kubectl-apply-vs-kubectl-create
+https://stackoverflow.com/questions/40144138/pull-a-local-image-to-run-a-pod-in-kubernetes -> important when using local images
+https://stackoverflow.com/questions/48376928/on-windows-setup-how-can-i-get-docker-image-from-local-machine -> for windows
 
-when setting up pods, you need to start up a cluster first (can use minikube)
+//when setting up pods, you need to start up a cluster first (can use minikube)
 minikube start
 
-then if you have a yaml for pod setup,
-kubectl create -f <yaml file>
+//then if you have a yaml for pod setup,
+kubectl apply -f <yaml file,yaml file2>
+
+// check stuff
+kubectl describe <pods,deployments> // see logs if any errors
+kubectl get <pods,deployments> // show pod state
+
+// delete pod
+kubectl delete pods <pod name>
+kubectl delete deploy <deployment name>
+
+// stop k8s
+minikube stop
 
 
 python/flask stuff

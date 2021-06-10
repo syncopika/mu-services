@@ -3,17 +3,20 @@
 
 # client-frontend
 # client-frontend_web is what I named my image via docker build
----
-apiVersion: v1
-kind: Pod
-metadata:
-  name: client-frontend
-spec:
-  containers:
-    - name: client-frontend
-      image: client-frontend_web
-      ports:
-        - containerPort: 5000
+# k so since client-frontend has docker-compose.yml, it seems to be recommended to use kompose to convert it to k8s deployment yml files.
+# ---
+# apiVersion: v1
+# kind: Pod
+# metadata:
+  # name: client-frontend
+# spec:
+  # containers:
+    # - name: client-frontend
+      # image: client-frontend_web
+      # ports:
+        # - containerPort: 5000
+
+
 
 # observer
 #---
@@ -22,9 +25,18 @@ spec:
 #metadata:
 #  name: observer
 
+
+
 # timekeeper
-#---
-#apiVersion: v1
-#kind: Pod
-#metadata:
-#  name: timekeeper
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: timekeeper
+spec:
+  containers:
+    - name: timekeeper
+      image: timekeeper
+      ports:
+        - containerPort: 8080
+      imagePullPolicy: IfNotPresent
