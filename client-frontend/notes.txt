@@ -1,2 +1,8 @@
 since there's a docker-compose.yml file here, you have to start up the container with `docker-compose up`.
 for use with k8s, use kompose to convert the docker-compose.yml to a k8s deployment yaml.
+kompose created env-dev-configmap.yaml, web-deployment.yaml, and web-service.yaml.
+
+In order to get them to play with k8s properly via kubectl, I think I need to build the image first. but since I'm using docker-compose,
+it'll name the image 'client-frontend_web'. but 'kompose convert' creates yaml files that want an image called 'web'. maybe 'kompose up'
+will take care of that? but 'kompose up' fails because it can't find Dockerfile!? 
+this looks helpful: https://blog.container-solutions.com/docker-to-kubernetes
